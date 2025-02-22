@@ -1,0 +1,39 @@
+<div class="container">
+    <h2>Agendamento de Transferência</h2>
+    <form [formGroup]="agendamentoForm" (ngSubmit)="onSubmit()">
+      
+      <!-- Conta de Origem e Destino -->
+      <div class="form-group row">
+        <div class="field col-md-6">
+          <label for="contaOrigem">Conta de Origem:</label>
+          <input type="number" formControlName="contaOrigem" class="form-control" required>
+        </div>
+        <div class="field col-md-6">
+          <label for="contaDestino">Conta de Destino:</label>
+          <input type="number" formControlName="contaDestino" class="form-control" required>
+        </div>
+      </div>
+  
+      <!-- Valor da Transferência -->
+      <div class="form-group row">
+        <div class="field col-md-6">
+          <label for="valor">Valor da Transferência (R$):</label>
+          <input type="number" formControlName="valor" class="form-control" step="0.01" required>
+        </div>
+      </div>
+  
+      <!-- Data da Transferência -->
+      <div class="form-group row">
+        <div class="field col-md-6">
+          <label for="dataTransferencia">Data da Transferência:</label>
+          <input type="date" formControlName="dataTransferencia" class="form-control" required>
+        </div>
+      </div>
+  
+      <!-- Botão de Agendamento -->
+      <div class="form-group">
+        <button type="submit"  class="cta-button">Agendar Transferência</button>
+        <button type="submit" [routerLink]="['/extrato-agendamento']" class="ctaa-button">Ver agendamentos</button>
+      </div>
+    </form>
+</div>

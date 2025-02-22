@@ -1,0 +1,29 @@
+<div class="container">
+    <h1>Extrato de Agendamentos</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Conta Origem</th>
+                <th>Conta Destino</th>
+                <th>Valor</th>
+                <th>Taxa</th>
+                <th>Data Transferência</th>
+                <th>Data Agendamento</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let agendamento of agendamentos">
+                <td>{{ agendamento.id }}</td>
+                <td>{{ agendamento.contaOrigem }}</td>
+                <td>{{ agendamento.contaDestino }}</td>
+                <td>{{ agendamento.valor  }}</td>
+                <td>{{ agendamento.taxa  }}</td>
+                <td>{{ agendamento.dataTransferencia }}</td>
+                <td>{{ agendamento.dataAgendamento }}</td>
+                <td>{{ agendamento.status }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
