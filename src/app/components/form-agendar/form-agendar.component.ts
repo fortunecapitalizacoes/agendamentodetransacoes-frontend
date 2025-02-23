@@ -2,8 +2,8 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 import { ImovelService } from './service.form-agendar';
 import { HttpClientModule } from '@angular/common/http';
-
 import { RouterModule } from '@angular/router';
+
 @Component({
   selector: 'app-form-agendar',
   standalone: true,
@@ -25,13 +25,20 @@ export class FormAgendarComponent {
   }
 
   onSubmit() {
-    debugger
     if (this.agendamentoForm.valid) {
-      this.servico.agendar(this.agendamentoForm.value).subscribe((response) => {
-        console.log(response)
+      this.servico.agendar(this.agendamentoForm.value).subscribe({
+        next: (response) => {
+          console.log(response);
+          alert('Agendamento realizado com sucesso!');
+        },
+        error: (erro) => {
+          console.error('Erro ao agendar:', erro);
+          alert('Erro ao realizar o agendamento. Tente novamente mais tarde.');
+        }
       });
     } else {
-        console.log('Formulário inválido');
+      console.log('Formulário inválido');
+      alert('Por favor, preencha o formulário corretamente.');
     }
   }
 }

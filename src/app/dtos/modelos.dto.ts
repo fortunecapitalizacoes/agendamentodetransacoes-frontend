@@ -15,3 +15,7 @@ export interface SolicitarAgendamentoRequest {
     dataAgendamento: string;
     status: string;
   }
+
+  export interface SolicitarCancelamentoAgendamentoRequest {
+    idAgendamento: number;
+   }

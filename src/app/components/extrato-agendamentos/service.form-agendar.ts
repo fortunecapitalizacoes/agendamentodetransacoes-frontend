@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { SolicitarAgendamentoRequest, SolicitarAgendamentoResponse } from '../../dtos/modelos.dto';
+import { SolicitarAgendamentoRequest, SolicitarAgendamentoResponse, SolicitarCancelamentoAgendamentoRequest } from '../../dtos/modelos.dto';
 
 
 @Injectable({
@@ -18,6 +18,10 @@ export class ImovelService {
 
   agendar(agendamento: SolicitarAgendamentoRequest): Observable<SolicitarAgendamentoResponse> {
     return this.http.post<SolicitarAgendamentoResponse>(this.API_URL, agendamento);
+  }
+
+  cancelar(agendamento: SolicitarCancelamentoAgendamentoRequest): Observable<string> {
+    return this.http.post<string>(this.API_URL+"/cancelar", agendamento);
   }
 
 }

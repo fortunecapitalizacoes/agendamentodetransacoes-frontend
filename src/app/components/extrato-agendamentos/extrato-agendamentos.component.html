@@ -11,6 +11,7 @@
                 <th>Data Transferência</th>
                 <th>Data Agendamento</th>
                 <th>Status</th>
+                <th>Ações</th>
             </tr>
         </thead>
         <tbody>
@@ -18,11 +19,16 @@
                 <td>{{ agendamento.id }}</td>
                 <td>{{ agendamento.contaOrigem }}</td>
                 <td>{{ agendamento.contaDestino }}</td>
-                <td>{{ agendamento.valor  }}</td>
-                <td>{{ agendamento.taxa  }}</td>
+                <td>{{ agendamento.valor }}</td>
+                <td>{{ agendamento.taxa }}</td>
                 <td>{{ agendamento.dataTransferencia }}</td>
                 <td>{{ agendamento.dataAgendamento }}</td>
                 <td>{{ agendamento.status }}</td>
+                <td>
+                    <button (click)="cancelarAgendamento(agendamento.id)" [disabled]="agendamento.status === 'Cancelado'">
+                        Cancelar
+                    </button>
+                </td>
             </tr>
         </tbody>
     </table>
