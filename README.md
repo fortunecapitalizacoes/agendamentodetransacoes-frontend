@@ -19,3 +19,15 @@ Acesse o sistema no navegador pelo endereço:
 `http://localhost:4200/`
 
 O sistema será recarregado automaticamente a cada alteração nos arquivos-fonte.
+
+## Estrutura do Projeto
+
+1 Tela de Cadastro de Transação: Permite ao usuário cadastrar novas transações, informando dados como valor, data e tipo de transação.
+
+2 Tela de Consulta de Transações: Exibe uma lista das transações agendadas, permitindo filtragem por data, tipo ou valor.
+
+### Tela de Cadastro de Transação
+![Cadastro de Transação](extrato.png)
+
+### Tela de Consulta de Transações
+![Consulta de Transações](caminho/para/imagem-consulta.png)

@@ -26,7 +26,6 @@ export class ExtratoAgendamentosComponent implements OnInit {
     this.imovelService.listarAgendamentos().subscribe({
       next: (dados) => {
         this.agendamentos = dados;
-        alert('Agendamentos carregados com sucesso!');
       },
       error: (erro) => {
         console.error('Erro ao buscar agendamentos:', erro);
