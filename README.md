@@ -8,6 +8,8 @@ Node.js instalado (versão recomendada: 18 ou superior)
 
 Angular CLI instalado globalmente (npm install -g @angular/cli)
 
+projeto `agendamento-trasacoes-backend` que pode ser baixado no seguinte link: `https://github.com/fortunecapitalizacoes/agendamentodetransacoes`
+
 ## Como executar o projeto
 
 No diretório raiz do projeto, execute o script serve.bat para iniciar o servidor de desenvolvimento:
@@ -20,14 +22,14 @@ Acesse o sistema no navegador pelo endereço:
 
 O sistema será recarregado automaticamente a cada alteração nos arquivos-fonte.
 
+### Tela de Cadastro de Transação
+![Cadastro de Transação](extrato.png)
+
+### Tela de Consulta de Transações
+![Consulta de Transações](agendar.png)
+
 ## Estrutura do Projeto
 
 1 Tela de Cadastro de Transação: Permite ao usuário cadastrar novas transações, informando dados como valor, data e tipo de transação.
 
 2 Tela de Consulta de Transações: Exibe uma lista das transações agendadas, permitindo filtragem por data, tipo ou valor.
-
-### Tela de Cadastro de Transação
-![Cadastro de Transação](extrato.png)
-
-### Tela de Consulta de Transações
-![Consulta de Transações](caminho/para/imagem-consulta.png)
